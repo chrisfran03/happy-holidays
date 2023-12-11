@@ -1,3 +1,31 @@
 <%- include("partials/header.ejs") %>
-    <h1>🎄 Merry Christmas!!!🎄 </h1>
+    <div class="container">
+        <div class="content">
+            <div class="message-container">
+                <h1 id="message">🎄'TIS CHRISTMAS IN🎄</h1>
+            </div>
+            <div class="time-container" id="time-container">
+                <div class="day-container">
+                    <div class="days-value" id="days-value"></div>
+                    <div class="days-label">Days</div>
+                </div>
+                <div class="hours-container">
+                    <div class="hours-value" id="hours-value"></div>
+                    <div class="hours-label">Hours</div>
+                </div>
+
+                <div class="minutes-container">
+                    <div class="minutes-value" id="minutes-value"></div>
+                    <div class="minutes-label">Minutes</div>
+                </div>
+
+                <div class="seconds-container">
+                    <div class="seconds-value" id="seconds-value"></div>
+                    <div class="seconds-label">Seconds</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <%- include("partials/footer.ejs") %>
