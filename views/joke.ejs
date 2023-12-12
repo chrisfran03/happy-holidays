@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+    <%if (locals.joke) {%>
+        <div class="joke-container">
+            <div class="question-container">
+                <%= joke.question %>
+            </div>
+            <div class="answer-container">
+                <%=joke.answer %>
+            </div>
+        </div>
+        <%}%>
+            <%if (locals.error) {%>
+                <div id="tag-error" class="tag-error">
+                    <%=error%>
+                </div>
+                <%}%>
+                    <%- include("partials/footer.ejs") %>
