@@ -192,6 +192,13 @@ button:active {
 
 @media (min-width:768px) and (max-width:1160px) {
 
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
     #message {
         font-size: 60px;
         font-family: 'Libre Baskerville', serif;
@@ -258,10 +265,12 @@ button:active {
         align-items: center;
         justify-content: center;
         color: white;
-        height: 100vh;
+        height: 80vh;
     }
 
     #message {
+        margin-top: 0px;
+
         font-size: 30px;
 
     }
@@ -330,19 +339,18 @@ button:active {
         align-items: center;
         justify-content: center;
         color: white;
-        height: 100vh;
     }
 
     #message {
-        font-size: 20px;
+        margin-top: 0px;
+        font-size: 25px;
         font-family: 'Libre Baskerville', serif;
         font-family: 'Lobster Two', sans-serif;
     }
 
     .nav-container {
-        margin: 15px;
+        margin: 0px;
         font-size: 20px;
-
     }
 
     .time-container {
@@ -357,16 +365,16 @@ button:active {
     .hours-value,
     .minutes-value,
     .seconds-value {
-        padding: 10px;
+        padding: 0px;
         font-size: 40px;
-        margin: 5px 0;
+        margin: 0;
     }
 
     .days-label,
     .hours-label,
     .minutes-label,
     .seconds-label {
-        padding: 10px;
+        padding: 5px;
         font-size: 20px;
     }
 
