@@ -13,6 +13,7 @@ function updateTime() {
     document.getElementById('minutes-value').innerHTML = minutes;
     document.getElementById('seconds-value').innerHTML = seconds;
 
+
     if (t < 0) {
         clearInterval(x);
         document.getElementById("message")
@@ -24,8 +25,18 @@ function updateTime() {
         document.getElementById("time-container").style.display = "none";
     }
 }
+if (document.getElementById('days-value')) {
+    setInterval(updateTime, 1000);
 
-setInterval(updateTime, 1000);
+    updateTime();
+}
+else {
+    console.log("Could not find the element to update time.")
+}
 
-updateTime();
+function revealAnswer() {
+    var answer = document.getElementById('answer');
+    answer.classList.remove('answer-container');
+    answer.classList.add('reveal');
+}
 

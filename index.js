@@ -20,7 +20,7 @@ app.get("/joke", async (req, res) => {
         });
     } catch (error) {
         console.error("Failed to make request:", error.message);
-        res.render("index.ejs", {
+        res.render("joke.ejs", {
             error: "Sorry the elves could not fetch you a joke.",
         });
     }

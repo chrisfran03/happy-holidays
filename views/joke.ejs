@@ -4,14 +4,20 @@
             <div class="question-container">
                 <%= joke.question %>
             </div>
-            <div class="answer-container">
+            <div>
+                <button onclick="revealAnswer()">
+                    <%= joke.question.split(' ')[0]  %>?</button>
+            </div>
+            <div class="answer-container" id="answer">
                 <%=joke.answer %>
             </div>
         </div>
         <%}%>
             <%if (locals.error) {%>
-                <div id="tag-error" class="tag-error">
-                    <%=error%>
+                <div class="container">
+                    <div class="error-container" id="tag-error" class="tag-error">
+                        <%=error%>
+                    </div>
                 </div>
                 <%}%>
                     <%- include("partials/footer.ejs") %>
