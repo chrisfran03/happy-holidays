@@ -92,6 +92,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 80vh;
     color: white;
 
@@ -138,7 +139,6 @@ button {
     font-weight: 700;
     letter-spacing: .8px;
     line-height: 20px;
-    margin: 20px;
     outline: none;
     overflow: visible;
     padding: 13px 16px;
@@ -189,54 +189,8 @@ button:active {
 }
 
 /* Adding breakpoints */
-@media (min-width:320px) and (max-width:420px) {
-    body {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-size: 100% auto;
-        background-attachment: fixed
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        height: 100vh;
-    }
-
-    #message {
-        font-size: 40px;
-        font-family: 'Libre Baskerville', serif;
-        font-family: 'Lobster Two', sans-serif;
-    }
-
-    .nav-container {
-        margin: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 50px;
-        font-family: 'Patua One', serif;
-        color: white;
-    }
-}
 
 @media (min-width:768px) and (max-width:1160px) {
-    body {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-size: 100% auto;
-        background-attachment: fixed
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        height: 100vh;
-    }
 
     #message {
         font-size: 60px;
@@ -246,22 +200,6 @@ button:active {
 
     .nav-container {
         margin: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 40px;
-        font-family: 'Patua One', serif;
-        color: white;
-    }
-
-    .time-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        justify-content: space-around;
-        font-family: 'Patua One', serif;
         font-size: 40px;
     }
 
@@ -281,6 +219,28 @@ button:active {
         padding: 10px;
         font-size: 30px;
         color: #ffc43c;
+    }
+
+    .question-container,
+    .error-container {
+        margin: 20px;
+        font-size: 30px;
+    }
+
+    .answer-container {
+        margin: 20px;
+        font-size: 30px;
+
+    }
+
+    .reveal {
+        margin: 20px;
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 20px;
+
     }
 
 }
@@ -303,28 +263,17 @@ button:active {
 
     #message {
         font-size: 30px;
-        font-family: 'Libre Baskerville', serif;
-        font-family: 'Lobster Two', sans-serif;
+
     }
 
     .nav-container {
         margin: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         font-size: 20px;
-        font-family: 'Patua One', serif;
-        color: white;
+
     }
 
     .time-container {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        justify-content: space-around;
-        font-family: 'Patua One', serif;
         font-size: 20px;
     }
 
@@ -343,7 +292,27 @@ button:active {
     .seconds-label {
         padding: 10px;
         font-size: 20px;
-        color: #ffc43c;
+    }
+
+    .question-container,
+    .error-container {
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .answer-container {
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .reveal {
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 20px;
+
     }
 
 }
@@ -372,12 +341,8 @@ button:active {
 
     .nav-container {
         margin: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         font-size: 20px;
-        font-family: 'Patua One', serif;
-        color: white;
+
     }
 
     .time-container {
@@ -385,9 +350,6 @@ button:active {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 100%;
-        justify-content: space-around;
-        font-family: 'Patua One', serif;
         font-size: 20px;
     }
 
@@ -406,7 +368,30 @@ button:active {
     .seconds-label {
         padding: 10px;
         font-size: 20px;
-        color: #ffc43c;
+    }
+
+    .question-container,
+    .error-container {
+        margin: 20px;
+        font-size: 15px;
+    }
+
+    .answer-container {
+
+        margin: 20px;
+        font-size: 15px;
+        font-family: 'Patua One', serif;
+    }
+
+    .reveal {
+        margin: 20px;
+        font-size: 15px;
+        font-family: 'Patua One', serif;
+    }
+
+    button {
+        font-size: 15px;
+
     }
 
 }
