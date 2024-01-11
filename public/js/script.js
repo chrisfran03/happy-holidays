@@ -1,8 +1,17 @@
 
 function updateTime() {
-    const today = new Date().getTime();
-    const christmasDay = new Date("dec 25, 2023 00:00:00").getTime();
-    let t = christmasDay - today;
+    const today = new Date();
+    const currentMonth = today.getMonth() + 1;
+    const currentDay = today.getDate();
+    const time = new Date().getTime();
+
+    // Figure out the year that the next Christmas will occur on
+    let nextChristmasYear = today.getFullYear();
+    if (currentMonth === 12 && currentDay > 25) {
+        nextChristmasYear += 1;
+    }
+    const christmasDay = new Date(`dec 25, ${nextChristmasYear} 00:00:00`).getTime();
+    let t = christmasDay - time;
     let days = Math.floor(t / (1000 * 60 * 60 * 24));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
@@ -14,10 +23,10 @@ function updateTime() {
     document.getElementById('seconds-value').innerHTML = seconds;
 
 
-    if (t < 0) {
+    if (days == 0) {
         clearInterval(x);
         document.getElementById("message")
-            .innerHTML = "🎄 SEE YOU IN 2024🎄";
+            .innerHTML = "🎄 HAPPY CHRISTMAS🎄";
         document.getElementById('days-value').style.display = "none";
         document.getElementById('hours-value').style.display = "none";
         document.getElementById('minutes-value').style.display = "none";
